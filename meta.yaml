@@ -1,5 +1,5 @@
 {% set name = "omero-dropbox" %}
-{% set version = "5.5.dev1" %}
+{% set version = "5.6.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 94251d8059c3e9fdce5714b9f776842041e5e986674c15bb53b810b915235518
+  sha256: db1b631719259b804275590b551b7b2884e6b7409a5bf321d8b202effe4e09d3
 
 build:
   noarch: python
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python =2.7
+    - python =3
   run:
-    - omero-py =5.5
-    - python =2.7
+    - omero-py =5.6
+    - python =3
 
 test:
   imports:
@@ -33,7 +33,6 @@ about:
   home: https://docs.openmicroscopy.org/latest/omero/developers/Server/FS.html
   license: GNU General Public v2 or later (GPLv2+)
   license_family: GPL2
-  license_file: 
   summary: OMERO.dropbox server for watching directories
   doc_url: https://docs.openmicroscopy.org/latest/omero/developers
   dev_url: https://github.com/ome/omero-dropbox
